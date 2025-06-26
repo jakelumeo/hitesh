@@ -1,0 +1,80 @@
+.stats-graph-mockup {
+  width: 300px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 10px 10px 10px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.stats-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.stat-box {
+  background: #faf9f7;
+  border-radius: 12px;
+  padding: 8px 18px 6px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.stat-label {
+  font-size: 13px;
+  color: #bdbdbd;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff9800;
+  letter-spacing: 1px;
+  transition: transform 0.4s cubic-bezier(0.25,0.8,0.5,1.1), opacity 0.4s;
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+.stat-value.stat-animated {
+  opacity: 1;
+  transform: scale(1.08);
+  animation: statPop 0.4s cubic-bezier(0.25,0.8,0.5,1.1);
+}
+@keyframes statPop {
+  0% { opacity: 0.7; transform: scale(0.95); }
+  60% { opacity: 1; transform: scale(1.12); }
+  100% { opacity: 1; transform: scale(1.08); }
+}
+.graph-area {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+}
+.graph-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: #222;
+  margin-top: 2px;
+  margin-left: 8px;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.dot.actual {
+  background: #3366ff;
+}
+.dot.projected {
+  background: #b3c6ff;
+  opacity: 0.5;
+} 
