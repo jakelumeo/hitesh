@@ -1,0 +1,172 @@
+.social-feed-mockup {
+  width: 280px;
+  height: 500px;
+  background: #000;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  will-change: auto;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.feed-tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.tab {
+  font-size: 14px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.tab.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.feed-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.feed-posts {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.feed-post {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: white;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.feed-post.slide-in {
+  animation: slideInPost 0.3s ease-out;
+}
+
+@keyframes slideInPost {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.post-user {
+  font-weight: bold;
+}
+
+.post-handle {
+  opacity: 0.7;
+}
+
+.post-time {
+  opacity: 0.5;
+}
+
+.post-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.action-btn {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.action-btn:hover {
+  opacity: 1;
+}
+
+.feed-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #333;
+  margin-top: auto;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  background: #333;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-icon:hover {
+  background: #555;
+}
+
+.notif-dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4444;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .social-feed-mockup {
+    width: 250px;
+    height: 450px;
+    padding: 15px;
+  }
+  
+  .feed-post {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .post-text {
+    font-size: 13px;
+  }
+} 
