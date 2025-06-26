@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --color-primary: #fd9e00;
+  --color-secondary: #fcba36;
+  --color-accent: #fdc557;
+  --color-light: #fddc90;
+  --color-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  background: linear-gradient(135deg, #fff7e6 0%, #f5e6c8 50%, #fddc90 100%);
+  min-height: 100vh;
+  color: var(--color-primary);
+  will-change: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  line-height: 1.1;
+}
+h2 {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+h3, h4, h5, h6 {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+.text-white {
+  color: var(--color-white);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Optimized Animation Styles */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Simplified Animation Types */
+.fade-in {
+    /* Just fades in, no movement */
+}
+
+.fade-in-up {
+    transform: translateY(30px);
+}
+
+.blur-in {
+    filter: blur(4px);
+    transform: scale(1.02);
+}
+
+/* Remove .global-bg-wrapper and section background override styles */

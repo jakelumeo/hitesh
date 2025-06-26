@@ -1,0 +1,90 @@
+.savings-gauge-container {
+  background: #fcfcfc;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  width: 320px;
+  padding: 24px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.savings-dropdown {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #fff5e2;
+  color: #44231a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 7px 18px 7px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  display: flex;
+  align-items: center;
+}
+.dropdown-arrow {
+  font-size: 0.9em;
+  margin-left: 6px;
+}
+.savings-gauge-svg {
+  margin-top: 32px;
+  margin-bottom: 0;
+  display: block;
+}
+.savings-gauge-center,
+.savings-gauge-center-semi {
+  position: static;
+  top: unset;
+  left: unset;
+  transform: none;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.savings-gauge-label {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.savings-gauge-value {
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.savings-gauge-sublabel {
+  color: #aaa;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.savings-gauge-periods {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 28px;
+  margin-bottom: 18px;
+}
+.savings-gauge-periods span {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: none;
+  border-radius: 8px;
+  padding: 2px 10px;
+  transition: background 0.2s;
+}
+.savings-gauge-periods .active {
+  background: #fff5e2;
+  color: #222;
+  font-weight: 700;
+}
+.savings-gauge-center-semi {
+  margin-top: -62px; /* increased negative value to move upward */
+} 
